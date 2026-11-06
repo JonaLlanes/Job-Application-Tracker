@@ -1,0 +1,329 @@
+:root {
+  color: #1c1915;
+  background: #f3efe6;
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.45;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 1px solid #c8c0b2;
+  background: #fff;
+  color: inherit;
+  border-radius: 8px;
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: #1f4d3a;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.primary {
+  background: #1f4d3a;
+  border-color: #1f4d3a;
+  color: #fff;
+}
+
+.danger {
+  background: #fff;
+  border-color: #9a3b32;
+  color: #9a3b32;
+}
+
+.page {
+  width: min(880px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #6d6458;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+}
+
+.filter span {
+  color: #6d6458;
+  font-size: 0.8rem;
+}
+
+.filter.active {
+  background: #1f4d3a;
+  border-color: #1f4d3a;
+  color: #fff;
+}
+
+.filter.active span {
+  color: #d7e6de;
+}
+
+.follow-up-filter.active {
+  background: #8a4b08;
+  border-color: #8a4b08;
+}
+
+.list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.card,
+.modal {
+  background: #fff;
+  border: 1px solid #e2ddd2;
+  border-radius: 12px;
+}
+
+.card {
+  padding: 1rem;
+}
+
+.card-due {
+  border-color: #e2c49a;
+}
+
+.card-header,
+.card-actions,
+.modal-actions,
+.badges {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card-header,
+.card-actions,
+.modal-actions {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.role {
+  color: #4d463d;
+}
+
+.due-mark {
+  color: #8a4b08;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.badges {
+  margin: 0.75rem 0;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+  font-size: 0.8rem;
+  background: #f3efe6;
+}
+
+.status-applied {
+  background: #e7f0ea;
+}
+
+.status-interview {
+  background: #e7eef8;
+}
+
+.status-offer {
+  background: #e5f6ea;
+}
+
+.status-rejected {
+  background: #f8e8e6;
+}
+
+.priority-high {
+  color: #8f2d2d;
+}
+
+.priority-medium {
+  color: #8a5a12;
+}
+
+.priority-low {
+  color: #3d5a40;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem 1rem;
+  margin: 0;
+}
+
+.details div {
+  min-width: 0;
+}
+
+dt {
+  color: #6d6458;
+  font-size: 0.75rem;
+}
+
+dd {
+  margin: 0.1rem 0 0;
+  overflow-wrap: break-word;
+}
+
+.notes {
+  margin-top: 0.85rem;
+}
+
+.notes h3 {
+  color: #6d6458;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.notes p {
+  white-space: pre-wrap;
+}
+
+.card-actions {
+  justify-content: flex-end;
+  margin-top: 0.9rem;
+}
+
+.empty,
+.form-error {
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+}
+
+.empty {
+  background: #fff;
+  border: 1px dashed #c8c0b2;
+}
+
+.form-error {
+  background: #f8e8e6;
+  color: #8f2d2d;
+  margin-bottom: 0.75rem;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 25, 21, 0.4);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.modal {
+  width: min(640px, 100%);
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+  padding: 1rem;
+}
+
+.confirm {
+  width: min(420px, 100%);
+}
+
+.confirm p {
+  margin: 0.75rem 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+}
+
+label {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #c8c0b2;
+  border-radius: 8px;
+  padding: 0.45rem 0.55rem;
+  background: #fff;
+  color: inherit;
+}
+
+.modal-actions {
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+@media (max-width: 700px) {
+  .page-header,
+  .details,
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .span-2 {
+    grid-column: auto;
+  }
+}

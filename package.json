@@ -1,0 +1,11 @@
+{
+  "name": "job-tracker",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm install --prefix client --include=dev && npm run build --prefix client && npm install --prefix server --omit=dev",
+    "start": "npm start --prefix server"
+  }
+}
